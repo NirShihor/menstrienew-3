@@ -87,14 +87,14 @@ html {
 .container {
   width: 100%;
   height: 60vh;
-  background-image: url(/images/menstriehills.jpg);
+  background-image: url(/images/menstriehills-min.jpg);
   background-position: center;
   background-size: cover;
 }
 
 @media only screen and (max-width: 600px) {
   .container {
-    background-image: url(/images/menstriehills-mobile.jpg);
+    background-image: url(/images/menstriehills-mobile-min.jpg);
   }
 }
 
@@ -328,7 +328,7 @@ html {
 .container-events {
   width: 100%;
   height: 60vh;
-  background-image: url(/images/Gala.jpg);
+  background-image: url(/images/Gala-min.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -368,7 +368,7 @@ html {
 .container-groups {
   width: 100%;
   height: 60vh;
-  background-image: url(/images/newBridgeWide.png);
+  background-image: url(/images/newBridgeWide-min.png);
   background-position: center;
   background-size: cover;
 }
@@ -503,7 +503,7 @@ html {
 .container-menstriematters {
   width: 100%;
   height: 60vh;
-  background-image: url(/images/flags.jpg);
+  background-image: url(/images/flags-min.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -538,7 +538,7 @@ html {
 .container-contacts {
   width: 100%;
   height: 60vh;
-  background-image: url(/images/MenstriefromAir.jpg);
+  background-image: url(/images/MenstriefromAir-min.jpg);
   background-position: center;
   background-size: cover;
 }
