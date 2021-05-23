@@ -1,0 +1,592 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body,
+html {
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* background-color: #eee; */
+  margin: auto;
+  font-size: 16px;
+  width: 100%;
+  background-color: #dfdddb;
+}
+
+:root {
+  --primary-color: rgba(136, 137, 138, 0);
+  --overlay-color: #777776;
+  --menu-speed: 0.75s;
+}
+
+/* Navbar */
+
+/* Add a black background color to the top navigation */
+.topnav {
+  overflow: hidden;
+  text-align: center !important;
+  margin: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  line-height: 2rem;
+  background-color: var(--overlay-color);
+  /* Delete following to make navbar break to two linese on smaller screens */
+  white-space: nowrap;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  /* float: left; */
+  display: inline-block;
+  color: rgb(253, 251, 251);
+  /* text-align: center; */
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 1300px) {
+  .topnav a {
+    padding-right: 2.2rem;
+    padding-left: 2.2rem;
+  }
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: rgb(44, 44, 44);
+}
+
+/* Prevent multi-word navlink from splitting on resize */
+.trans {
+  color: transparent;
+}
+/* Navbar End */
+
+/* .castle-img-container {
+  display: flex;
+  background-image: url('/images/menstrieCasleFreshFull-min3.jpg');
+  background-repeat: no-repeat;
+  background-color: rgb(48, 118, 247);
+  background-blend-mode: lighten;
+  background-size: 100%;
+  height: 100vh;
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 1100px) {
+  .castle-img-container {
+    background-image: url('/images/menstrieCasleFreshCopy-min.jpg');
+  }
+} */
+
+.container {
+  width: 100%;
+  height: 60vh;
+  background-image: url(/images/menstriehills.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    background-image: url(/images/menstriehills-mobile.jpg);
+  }
+}
+
+.hide-navbar {
+  display: none;
+}
+
+.row {
+  display: flex;
+  height: 88%;
+  align-items: center;
+}
+
+.col {
+  /* flex-basis: 50%;
+  min-width: 50%; */
+  /* padding: 5rem; */
+  color: #fff;
+  margin-top: 5rem;
+}
+
+.col1:nth-of-type(1) {
+  flex-basis: 100%;
+}
+
+.col h1 {
+  font-size: 4rem;
+}
+
+.col h2 {
+  font-size: 3.5rem;
+}
+
+.col1 {
+  text-align: center;
+  text-shadow: 0 0 10px rgb(12, 12, 12);
+  -webkit-text-stroke-width: 1.4px;
+  -webkit-text-stroke-color: black;
+}
+
+.col2 {
+  padding-left: 2rem;
+}
+
+@media only screen and (max-width: 1100px) {
+  .col h1 {
+    font-size: 4rem;
+  }
+
+  .col h2 {
+    font-size: 2.5rem;
+  }
+}
+
+.text-card {
+  width: 70%;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 2rem !important;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 50px 0px 40px rgba(0, 0, 0, 0.3),
+    -10px 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+.main-text {
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.main-paragraph {
+  width: 80%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 2rem;
+  padding-bottom: 1rem !important;
+  margin: auto;
+  text-align: left;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.main-paragraph2 {
+  display: inline-block;
+  padding-top: 0rem !important;
+  margin-left: 12rem;
+  margin-right: 2rem;
+}
+
+@media only screen and (max-width: 1100px) {
+  .main-paragraph {
+    width: 100%;
+    font-size: 1rem;
+    margin-left: 7vw;
+  }
+
+  .text-card {
+    width: 90%;
+  }
+  .indent {
+    font-size: 1rem !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .indent {
+    font-size: 0.85rem !important;
+  }
+  .main-paragraph2 {
+    padding-top: 0rem !important;
+  }
+}
+
+.email {
+  color: rgb(37, 37, 37);
+}
+
+.fab {
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.fab:hover {
+  transform: translateY(-5px);
+}
+
+.no-break {
+  white-space: nowrap;
+}
+
+.flex-container {
+  display: flex;
+  background-color: #fff;
+  width: 50%;
+  margin: auto;
+  margin-top: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  border-radius: 0.4rem;
+  box-shadow: 50px 0px 40px rgba(0, 0, 0, 0.3),
+    -10px 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+.flex-bottom {
+  margin-bottom: 3rem;
+}
+
+.flex-inner {
+  padding: 0rem 5rem 2rem 3rem;
+}
+
+.flex-inner img {
+  width: 15rem;
+  border-radius: 0.2rem;
+}
+
+.old-new-grid-text-flex {
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.inner-flex-oldandnew {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+
+.inner-flex-oldandnew > div {
+  margin-left: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+}
+
+@media only screen and (max-width: 1200px) {
+  .flex-container {
+    width: 90%;
+  }
+  .flex-inner img {
+    width: 20rem;
+  }
+  .flex-inner {
+    padding: 0rem 2rem 2rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 1650px) {
+  .flex-container {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .flex-container {
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+  }
+  .flex-inner img {
+    width: 20rem;
+  }
+  .old-new-grid-text-flex {
+    margin-top: 0vh !important;
+  }
+}
+
+.old-new-heading {
+  position: absolute;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  color: white;
+  text-shadow: 0 0 10px rgb(12, 12, 12);
+  -webkit-text-stroke-width: 1.4px;
+  -webkit-text-stroke-color: black;
+}
+
+.link {
+  color: rgb(88, 88, 88);
+}
+
+.container-events {
+  width: 100%;
+  height: 60vh;
+  background-image: url(/images/Gala.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.calendar-icon {
+  padding-top: 2rem;
+}
+
+.year {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.covid-announce {
+  padding-top: 2rem;
+  color: rgb(158, 68, 68);
+  text-align: center;
+  margin: auto;
+}
+
+.covid-announce h2 {
+  width: 65%;
+  text-align: left;
+  margin: auto;
+}
+
+@media only screen and (max-width: 900px) {
+  .covid-announce h2 {
+    width: 85%;
+  }
+}
+
+.text-card-events {
+  text-align: center !important;
+}
+
+.container-groups {
+  width: 100%;
+  height: 60vh;
+  background-image: url(/images/newBridgeWide.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.flex-container-groups-wrapper {
+  /* border: 4px solid orange; */
+  margin: 1%;
+  /* padding: 3rem; */
+  border-radius: 0.3rem;
+}
+
+@media only screen and (max-width: 1100px) {
+  .flex-container-groups-wrapper {
+    margin: 5%;
+    background-color: #fff;
+    box-shadow: 50px 0px 40px rgba(0, 0, 0, 0.3),
+      -10px 20px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.flex-container-groups {
+  /* border: 4px solid red; */
+  margin: 4rem auto 3rem auto;
+  padding: 2rem;
+  width: 70%;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  box-shadow: 50px 0px 40px rgba(0, 0, 0, 0.3),
+    -10px 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 1300px) {
+  .flex-container-groups {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .flex-container-groups {
+    flex-direction: column;
+    text-align: center;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .flex-container-groups-img {
+    padding-top: 3rem;
+  }
+  .mcrg {
+    max-width: 25% !important;
+  }
+  .mmra {
+    width: 40% !important;
+  }
+}
+
+.flex-container-groups-img {
+  /* border: 4px solid blue; */
+  text-align: center;
+}
+
+.flex-container-groups-img img {
+  width: 10rem;
+}
+
+.flex-container-groups-text {
+  padding-top: 1rem;
+}
+
+.mcrg {
+  max-width: 50%;
+}
+
+.simple-heading {
+  padding: 3rem 3rem 0rem 3rem;
+  text-align: center;
+}
+
+.container-official {
+  width: 100%;
+  height: 60vh;
+  background-image: url(/images/MenstrieSunLong-wide-min.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.text-flexbox {
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+  /* border: 4px solid red; */
+  margin: auto;
+  font-size: 1.3rem;
+  text-align: left;
+}
+
+.flex-heading {
+  /* border: 3px solid blue; */
+  min-width: 40%;
+}
+
+.flex-text {
+  /* border: 3px solid green; */
+  margin-left: 3rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .text-flexbox {
+    width: 85%;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .flex-heading {
+    max-width: 30%;
+  }
+  .flex-text {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .flex-text {
+    margin-left: 1rem;
+  }
+}
+
+.container-menstriematters {
+  width: 100%;
+  height: 60vh;
+  background-image: url(/images/flags.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.flex-magazine {
+  justify-content: flex-start;
+  /* border: solid 3px red; */
+  text-align: left !important;
+  width: 65% !important;
+}
+
+.magazine {
+  /* border: solid 2px green; */
+  min-width: 60%;
+}
+
+@media screen and (max-width: 1300px) {
+  .flex-magazine {
+    justify-content: space-between;
+  }
+  .magazine {
+    min-width: 80%;
+  }
+}
+
+@media screen and (min-width: 1301px) and (max-width: 1800px) {
+  .magazine {
+    min-width: 70% !important;
+  }
+}
+
+.container-contacts {
+  width: 100%;
+  height: 60vh;
+  background-image: url(/images/MenstriefromAir.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.flex-container-business {
+  border: 3px solid red;
+}
+
+.business-logo {
+  border: 3px solid green;
+}
+
+.business-text {
+  border: 3px solid blue;
+}
+
+.grid-container-contacts {
+  display: grid;
+  width: 50%;
+  margin: auto;
+  /* border: 3px solid red; */
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 6rem;
+}
+
+.grid-cell-logo {
+  /* border: solid 3px green; */
+  display: flex;
+}
+
+.grid-cell-logo img {
+  max-width: 15rem;
+  height: 4rem;
+  margin-top: 1rem;
+}
+
+.grid-cell-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: solid 3px blue; */
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .grid-container-contacts {
+    width: 80%;
+    grid-template-columns: 70% 30%;
+  }
+}
