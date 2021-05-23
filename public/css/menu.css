@@ -47,7 +47,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
 }
 
 /* Top and bottom line (on top of each other*/
