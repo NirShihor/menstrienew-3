@@ -47,7 +47,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 
 /* Top and bottom line (on top of each other*/
@@ -147,9 +147,17 @@
   color: #2e8b57;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 599px) {
   .topnav {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 950px) and (min-width: 600px) {
+  .topnav a {
+    font-size: 0.8rem;
+    padding-right: 0.6rem;
+    padding-left: 0.6rem;
   }
 }
 
@@ -163,8 +171,8 @@
   }
 }
 
-/* Green overlay not showing on larger screens */
-@media only screen and (min-width: 1199px) {
+/*  overlay not showing on larger screens */
+@media only screen and (min-width: 600px) {
   .topnav {
     text-align: center;
     margin: auto;
