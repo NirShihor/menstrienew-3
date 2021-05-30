@@ -61,6 +61,13 @@ html {
   color: rgb(44, 44, 44);
 }
 
+/* Display line under clicked navbar link */
+.active {
+  text-decoration-line: underline !important;
+  text-decoration-thickness: 2px !important;
+  color: rgb(20, 19, 19);
+}
+
 /* Prevent multi-word navlink from splitting on resize */
 .trans {
   color: transparent;

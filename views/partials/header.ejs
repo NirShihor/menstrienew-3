@@ -21,7 +21,9 @@
       src="https://kit.fontawesome.com/b6ca17b8c7.js"
       crossorigin="anonymous"
     ></script>
-    <title>Menstrie Community Council Website</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>Menstrie Community Council</title>
   </head>
   <body>
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
@@ -30,13 +32,17 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <div class="topnav" id="myTopnav">
-      <a href="/" class="active">Home</a>
-      <a href="oldandnew">Old and New</a>
-      <a href="events">Events</a>
-      <a href="groups">Groups</a>
-      <a href="official">Official</a>
-      <a href="menstriematters">Menstrie<span class="trans">t</span>matters</a>
-      <a href="localcontacts">Helpful<span class="trans">t</span>Contacts</a>
+      <a href="/" class="nav-link">Home</a>
+      <a class="nav-link" href="oldandnew">Old and New</a>
+      <a class="nav-link" href="events">Events</a>
+      <a class="nav-link" href="groups">Groups</a>
+      <a class="nav-link" href="official">Official</a>
+      <a class="nav-link" href="menstriematters"
+        >Menstrie<span class="trans">t</span>matters</a
+      >
+      <a class="nav-link" href="localcontacts"
+        >Helpful<span class="trans">t</span>Contacts</a
+      >
       <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
       </a> -->
@@ -48,17 +54,35 @@
         <div>
           <div>
             <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="oldandnew">Old and New</a></li>
-              <li><a href="events">Events</a></li>
-              <li><a href="groups">Groups</a></li>
-              <li><a href="official">Official</a></li>
-              <li><a href="menstriematters">Menstrie Matters</a></li>
-              <li><a href="localcontacts">Helpful Contacts</a></li>
+              <li><a class="nav-link" href="/">Home</a></li>
+              <li><a class="nav-link" href="oldandnew">Old and New</a></li>
+              <li><a class="nav-link" href="events">Events</a></li>
+              <li><a class="nav-link" href="groups">Groups</a></li>
+              <li><a class="nav-link" href="official">Official</a></li>
+              <li>
+                <a class="nav-link" href="menstriematters">Menstrie Matters</a>
+              </li>
+              <li>
+                <a class="nav-link" href="localcontacts">Helpful Contacts</a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </div>
+
+    <script>
+      $(document).ready(function () {
+        // Underline to remain in navbar after click using URL
+        jQuery(function ($) {
+          var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
+          $('.nav-link').each(function () {
+            if (this.href === path) {
+              $(this).addClass('active');
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
